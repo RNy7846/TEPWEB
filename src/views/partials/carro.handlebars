@@ -1,0 +1,19 @@
+<div class="d-flex">
+  <div class="p-2 ">
+    <label>{{this.id}}</label>
+    <label>Nome: {{this.nome}} - </label>
+    <label>Modelo: {{this.model}}</label>
+    <label>Motor: {{this.motor}}</label>
+    <label>Ano: {{this.ano}} -</label>
+    <label>Fabricante: {{this.fabricante}} -</label>
+    <label>Cor: {{this.cor}}</label>
+    <label>Opcionais: {{this.opcionais}}</label>
+  </div>
+</div>
+<div>
+    <a href="/edit/{{this.id}}">Editar</a>  
+  <form action="/remove" method="POST">
+    <input type="text" name="id" value="{{this.id}}", hidden>
+    <input type="submit" value="Excluir" class="btn btn-primary" >
+  </form>
+</div>
