@@ -1,17 +1,18 @@
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
 
-const sequelize = new Sequelize('tepweb', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql',
-    omitNull: true
+const sequelize = new Sequelize('carros', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql' /* one of 'mysql' | 'mariadb' | 'postgres' | 'mssql' */,
+  omitNull: true
+});
+
+sequelize
+  .authenticate()
+  .then(function () {
+    console.log('Conectado ao banco de dados!');
+  })
+  .catch(function () {
+    console.log('Erro: falha ao conectar ao banco!');
   });
 
-sequelize.authenticate()
-.then(function(){
-    console.log("Conectado com o banco")
-  
-}).catch(function(){
-    console.log("Falha com o banco")
-})
-
-module.exports = sequelize
+module.exports = sequelize;

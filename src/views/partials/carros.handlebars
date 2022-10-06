@@ -1,0 +1,33 @@
+<div class="p-2 border d-flex flex-column fs-5 bg-light bg-gradient" style="width: 35rem;">
+  <div class="p-1 d-flex justify-content-between">
+    <div class="labels">
+
+      <label hidden>{{this.id}}</label>
+      <label>Nome: {{this.nome}}</label>
+      <label>Modelo: {{this.modelo}}</label>
+    </div>
+
+    <div class="buttons d-flex">
+      <div class="p-1">
+        <a href="/carros/editar/{{this.id}}" class="btn btn-warning">Editar</a>  
+      </div>
+      <form action="/carros/deleta" method="POST" class='p-1' >
+        <input type="text" name="id" value="{{this.id}}", hidden>
+        <input type="submit" value="Excluir" class="btn btn-danger" >
+      </form>
+    </div>
+
+  </div>
+  <div class="border">
+    <h5 class="p-1">Detalhes</h5>
+    <label class="p-1">Motor: {{this.motor}}</label>
+    <label class="p-1">Ano: {{this.ano}}</label>
+    <label class="p-1">Fabricante: {{this.fabricante}}</label>
+    <label class="p-1">Cor: {{this.cor}}</label>
+    <label class="p-1">Valor: R${{this.valor}}</label>
+    <label class="p-1">Opcionais: {{this.opcionais}}</label>
+     
+  </div>
+
+
+</div>

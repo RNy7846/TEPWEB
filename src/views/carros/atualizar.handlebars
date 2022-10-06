@@ -1,0 +1,72 @@
+<div class="container p-2">
+  <h2>Atualizar carro</h2>
+  <form action="/carros/editar" method="POST" class="container-fluid d-flex flex-column">
+    <div class="row g-3 p-2 d-flex justify-content-end ">
+      <input type="text" name="id" value="{{carro.id}}" hidden />
+      <div class="col-auto">
+        <label for="nome" class="form-label flex-fill" style="width: 5rem;">Nome:</label>  
+      </div>
+      <div class="col-auto">
+        <input type="text" name="nome" class="form-control" value="{{carro.nome}}">
+      </div>
+
+      <div class="col-auto">
+        <label for="modelo" class="form-label" style="width: 5rem;">Modelo:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="modelo" class="form-control" value="{{carro.modelo}}"> 
+      </div>
+
+      <div class="col-auto">
+        <label for="motor" class="form-label" style="width: 5rem;">Motor:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="motor" class="form-control" value="{{carro.motor}}">
+      </div>
+
+       <div class="col-auto">
+        <label for="ano" class="form-label" style="width: 5rem;">Ano:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="ano" class="form-control" value="{{carro.ano}}">
+      </div>
+
+       
+    </div>
+
+    <div class="row g-3 p-2 d-flex justify-content-end">
+      <div class="col-auto">
+        <label for="fabricante" class="form-label" style="width: 5rem;">Fabricante:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="fabricante" class="form-control" value="{{carro.fabricante}}">
+      </div>
+
+      <div class="col-auto">
+        <label for="valor" class="form-label" style="width: 5rem;">Valor:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="valor" class="form-control" value="{{carro.valor}}">
+      </div>
+
+      <div class="col-auto">
+        <label for="cor" class="form-label" style="width: 5rem;">Cor:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="cor" class="form-control" value="{{carro.cor}}">
+      </div>
+
+      <div class="col-auto">
+        <label for="opcionais" class="form-label" style="width: 5rem;">Opcionais:</label>
+      </div>
+      <div class="col-auto">
+        <input type="text" name="opcionais" class="form-control" value="{{carro.opcionais}}">
+      </div>  
+    </div>
+    <div class="d-flex justify-content-center p-2">
+
+    <input type="submit" class="btn btn-primary justfy-content-start" value="Atualizar">  
+    </div>
+      
+  </form>
+</div>

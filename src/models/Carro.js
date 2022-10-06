@@ -1,72 +1,55 @@
-const Sequelize = require('sequelize')
-const db = require('./banco.js')
+const Sequelize = require('sequelize');
+const banco = require('./banco.js');
 
-const Car = db.define('carros', {
+const Carro = banco.define('carros', {
   id: {
     type: Sequelize.INTEGER,
     autoIncrement: true,
     allowNull: false,
     primaryKey: true
   },
-
   nome: {
     type: Sequelize.STRING,
     allowNull: false,
-    unique: false,
-    notEmpty: {
-      msg: 'Nome nao pode ser em branco'
-    }
+    notEmpty: true
   },
-
-  model: {
+  modelo: {
     type: Sequelize.STRING,
     allowNull: false,
-    notEmpty: {
-      msg: 'Modelo nao pode ser em branco'
-    }
+    notEmpty: true
   },
-
   motor: {
     type: Sequelize.STRING,
     allowNull: false,
-    notEmpty: {
-      msg: 'Motor nao pode ser em branco'
-    }
+    notEmpty: true
   },
-
   ano: {
-    type: Sequelize.INTEGER,
+    type: Sequelize.STRING,
     allowNull: false,
-    notEmpty: {
-      msg: 'Ano nao pode ser em branco'
-    }
+    notEmpty: true
   },
-
   fabricante: {
     type: Sequelize.STRING,
     allowNull: false,
-    notEmpty: {
-      msg: 'Fabricante nao pode ser em branco'
-    }
+    notEmpty: true
   },
-
+  valor: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    notEmpty: true
+  },
   cor: {
     type: Sequelize.STRING,
     allowNull: false,
-    notEmpty: {
-      msg: 'Cor nao pode ser em branco'
-    }
+    notEmpty: true
   },
-
   opcionais: {
     type: Sequelize.STRING,
     allowNull: false,
-    notEmpty: {
-      msg: 'Opcionais nao pode ser em branco'
-    }
+    notEmpty: true
   }
-})
+});
 
-Car.sync()
+Carro.sync()
 
-module.exports = Car
+module.exports = Carro
